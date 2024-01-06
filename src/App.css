@@ -122,9 +122,9 @@
 .message {
   padding: 12px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 25px;
   max-width: 60%;
-  background-color: #0fab45;
+  background-color: #5cadd5 !important;
 }
 
 .message-image {
@@ -219,7 +219,7 @@
   height: 100vh;
 	width: 100%;
   background: rgb(73, 100, 205);
-  background: linear-gradient(90deg, rgb(70, 111, 205) 7%, rgba(70, 111, 205) 17%, rgb(95, 168, 96) 29%, rgb(99, 174, 113) 44%, rgba(70, 111, 205) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);  
+    
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,6 +290,6 @@
   right: 0;
 }
 
-.ce-message-bubble{
-  background-color: #0fab45;
-}
+
+
+
