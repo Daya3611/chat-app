@@ -1,23 +1,26 @@
-/* CHAT STYLES */
+/* GENERAL STYLES */
 * {
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
-.ce-chat-list {
-  background-color: rgb(240, 240, 240) !important;
-}
-
-.ce-chats-container {
+/* CHAT STYLES */
+.ce-chat-list,
+.ce-chats-container,
+.ce-settings {
   background-color: rgb(240, 240, 240) !important;
 }
 
 .ce-active-chat-card {
   background-color: #c1ecff !important;
   border: 4px solid #c1ecff !important;
-  border-radius: 0px !important;
+  border-radius: 0 !important;
 }
 
 .ce-chat-subtitle-text {
@@ -28,7 +31,8 @@
   padding-bottom: 20px !important;
 }
 
-.ce-text-input {
+.ce-text-input,
+.ce-autocomplete-input {
   border-radius: 6px !important;
   border: 1px solid #3e28d1 !important;
 }
@@ -43,15 +47,6 @@
 .ce-danger-button {
   background-color: white !important;
   border-radius: 22px !important;
-}
-
-.ce-settings {
-  background-color: rgb(240, 240, 240) !important;
-}
-
-.ce-autocomplete-input {
-  border-radius: 6px !important;
-  border: 1px solid #1c0fab !important;
 }
 
 .ce-autocomplete-options {
@@ -69,7 +64,6 @@
 }
 
 /* CUSTOM FEED */
-
 .chat-feed {
   height: 100%;
   width: 100%;
@@ -132,7 +126,6 @@
   object-fit: cover;
   border-radius: 6px;
   height: 30vw;
-  /* width: 30vw; */
   max-height: 200px;
   max-width: 200px;
   min-height: 100px;
@@ -156,7 +149,7 @@
 
 .message-form-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: calc(100% - 36px);
   padding: 18px;
   background-color: rgb(240, 240, 240);
@@ -174,14 +167,14 @@
   width: calc(100% - 132px);
   background-color: white;
   border: 1px solid white;
-  padding: 0px 18px;
+  padding: 0 18px;
   outline: none;
   font-size: 15px;
 }
 
 .image-button {
   cursor: pointer;
-  padding: 0px 12px;
+  padding: 0 12px;
   height: 100%;
 }
 
@@ -189,38 +182,25 @@
   height: 42px;
   background-color: white;
   border: 1px solid white;
-  padding: 0px 18px;
+  padding: 0 18px;
   cursor: pointer;
 }
 
-.send-icon {
-  top: 1px;
-  position: relative;
-  transform: rotate(-90deg);
-}
-
+.send-icon,
 .picture-icon {
   top: 1px;
   position: relative;
-  font-size: 14px;
+}
+
+.send-icon {
+  transform: rotate(-90deg);
 }
 
 /* FORM STYLES */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62,5%;
-}
-
 .wrapper {
   height: 100vh;
-	width: 100%;
-  
+  width: 100%;
   background-image: url(bg.jpg);
-    
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,7 +209,7 @@
 .input {
   color: #333;
   font-size: 1.2rem;
-	margin: 0 auto;
+  margin: 0 auto;
   padding: 1.5rem 2rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
@@ -251,7 +231,7 @@
   color: white;
   margin-bottom: 30px;
   width: 100%;
-  font-size: 2.3em;;
+  font-size: 2.3em;
 }
 
 .button {
@@ -269,12 +249,14 @@
   margin: 5px;
   width: 90%;
 }
+
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.4s;
 }
+
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -283,14 +265,12 @@
   right: -20px;
   transition: 0.5s;
 }
+
 .button:hover span {
   padding-right: 25px;
 }
+
 .button:hover span:after {
   opacity: 1;
   right: 0;
 }
-
-
-
-
