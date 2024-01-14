@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { SendOutlined, PictureOutlined } from '@ant-design/icons';
+import { PlayCircleTwoTone, CameraTwoTone } from '@ant-design/icons';
 import { sendMessage, isTyping } from 'react-chat-engine';
+
 
 const MessageForm = (props) => {
   const [value, setValue] = useState('');
@@ -28,6 +29,8 @@ const MessageForm = (props) => {
     sendMessage(creds, chatId, { files: event.target.files, text: '' });
   };
 
+  
+
   return (
     <form className="message-form" onSubmit={handleSubmit}>
       <input
@@ -39,7 +42,8 @@ const MessageForm = (props) => {
       />
       <label htmlFor="upload-button">
         <span className="image-button">
-          <PictureOutlined className="picture-icon" />
+          
+          <CameraTwoTone className="img" />
         </span>
       </label>
       <input
@@ -50,9 +54,11 @@ const MessageForm = (props) => {
         onChange={handleUpload.bind(this)}
       />
       <button type="submit" className="send-button">
-        <SendOutlined className="send-icon" />
+        <PlayCircleTwoTone className="send-icon" />
+       
       </button>
     </form>
+    
   );
 };
 
