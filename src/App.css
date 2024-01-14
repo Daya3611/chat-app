@@ -52,13 +52,13 @@
 }
 
 .chat-title {
-  color: #0f2ea1;
+  color: #1890ff;
   font-weight: 800;
   font-size: 24px;
 }
 
 .chat-subtitle {
-  color: #37c5ca;
+  color: #76a6d3;
   font-weight: 600;
   font-size: 12px;
   padding-top: 4px;
@@ -90,9 +90,13 @@
 .message {
   padding: 12px;
   font-size: 16px;
-  border-radius: 18px;  
+  border-radius: 20px 0px 20px 20px !important;  
   max-width: 60%;
-  background-color : #73bad8 !important ;
+  background-color : #1890ff !important ;
+}
+.message-row .message{
+  background-color: rgb(225, 234, 236) !important;
+  border-radius: 0px 20px 20px 20px !important;
 }
 
 .message-image {
@@ -140,7 +144,7 @@
 
 .message-input {
   height: 40px;
-  width: calc(100% - 132px);
+  width: 80%;
   background-color: white;
   border: 1px solid white;
   padding: 0px 18px;
@@ -150,27 +154,34 @@
 
 .image-button {
   cursor: pointer;
-  padding: 0px 12px;
+  padding-right: 2px;
   height: 100%;
+  padding-left: 60px;
+  position: relative;
 }
 
 .send-button {
-  height: 42px;
+  height: 25px;
   background-color: white;
   border: 1px solid white;
-  padding: 0px 18px;
+  padding: 0px 20px;
   cursor: pointer;
 }
 
 .send-icon {
-  top: 1px;
+  
+  height: 25px;
+  width: 25px;
+  
   position: relative;
-  transform: rotate(-90deg);
-}
+  /* transform: rotate(-90deg); */
+}s
 
 .picture-icon {
-  top: 1px;
-  position: relative;
+  
+  height: 100%;
+  width: 100%;
+  position: center;
   font-size: 14px;
 }
 
@@ -325,3 +336,4 @@
   position: relative;
   transition: 0.4s;
 }
+
