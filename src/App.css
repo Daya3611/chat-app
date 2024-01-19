@@ -174,7 +174,7 @@
   width: 25px;
   /* top: -7px; */
   position: relative;
-  transform: rotate(-90deg) !important;
+  /* transform: rotate(-90deg) !important; */
 }s
 
 .picture-icon {
@@ -237,6 +237,7 @@ input:focus{
   -webkit-box-shadow: 16px 16px 25px 7px rgba(0,0,0,0.75);
 -moz-box-shadow: 16px 16px 25px 7px rgba(0,0,0,0.75);
 box-shadow: 16px 16px 25px 7px rgba(0,0,0,0.75);
+
 }
 
 .title {
