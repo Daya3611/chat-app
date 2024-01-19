@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
+// import logo from '../logo.png';
 
-const projectID = 'f547c03d-6f33-4891-a89c-5f7dc409d465';
+const projectID = 'fa24b1ce-5db1-4bdb-98ba-b49cb82f0032';
 
 const Modal = () => {
   const [username, setUsername] = useState('');
@@ -11,7 +12,7 @@ const Modal = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const authObject = { 'Project-ID': "f547c03d-6f33-4891-a89c-5f7dc409d465", 'User-Name': username, 'User-Secret': password };
+    const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': password };
 
     try {
       await axios.get('https://api.chatengine.io/chats', { headers: authObject });
@@ -29,6 +30,7 @@ const Modal = () => {
   return (
     <div className="wrapper">
       <div className="form">
+        {/* <img id="logo" src={logo}/> */}
         <h1 className="title">Login</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
