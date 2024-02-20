@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 // import logo from '../logo.png';
 
-const projectID = 'fa24b1ce-5db1-4bdb-98ba-b49cb82f0032';
+const projectID = 'b3850579-bf8a-468c-a689-443644bd4898';
 
 const Modal = () => {
   const [username, setUsername] = useState('');
@@ -41,7 +41,7 @@ const Modal = () => {
             </button>
           </div>
         </form>
-        <h1>{error}</h1>
+        <h1 className="c">{error}</h1>
       </div>
     </div>
 
