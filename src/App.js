@@ -3,7 +3,7 @@ import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
-import audo from './ad.mp3'
+
 import React from 'react';
 
 
@@ -18,7 +18,7 @@ const App = () => {
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-      onNewMessage={() => new Audio({audo}).play()}
+      onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
       renderMessageBubble={(creds, chat, lastMessage, message, nextMessage) => {}}
       renderIsTyping={(typers) => {}}
     />
